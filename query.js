@@ -1,20 +1,9 @@
-let menuVisible = false;
 $("#menu-toggle").click(function () {
-  $("#menu").slideToggle(200);
-
-  if (menuVisible == true) {
-    $("#menu-toggle").attr("aria-label", "Open the menu");
-    menuVisible = false;
-  } else {
-    $("#menu-toggle").attr("aria-label", "Close the menu");
-    menuVisible = true;
-  }
-
-  console.log($("#menu-toggle").attr("aria-label"));
+  $("#menu").slideToggle(300);
 });
 
 $(window).resize(function () {
-  if (window.innerWidth > 650) {
+  if (window.innerWidth > 810) {
     $("#menu").show();
   } else {
     $("#menu").hide();
